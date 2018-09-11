@@ -6,5 +6,7 @@ package com.mason.blog.singleton
  * 目前最优雅，最简单，最安全的单例实现方式
  */
 enum class EnumSingleton {
-  INSTANCE
+  INSTANCE;
+
+  fun whareverMethod() {}
 }

@@ -6,7 +6,6 @@ package com.mason.blog.singleton
  * 原理：在生成实例的方法上加@Synchronized注解，相当于Java中的synchronized关键字
  * 缺点：牺牲性能--发现也没牺牲啥性能，难道是我用的方式不对？
  */
-
 class SyncLazySingleton private constructor() {
 
   init {
@@ -24,5 +23,4 @@ class SyncLazySingleton private constructor() {
       return instance
     }
   }
-
 }

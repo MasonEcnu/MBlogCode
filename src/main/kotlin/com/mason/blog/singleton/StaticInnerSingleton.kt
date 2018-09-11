@@ -3,7 +3,7 @@ package com.mason.blog.singleton
 /**
  * Created by mwu on 2018/9/11
  * 静态内部类单例
- * 缺点：可被反射破坏
+ * 优点：延迟加载+线程安全+使用时才创建
  */
 class StaticInnerSingleton private constructor() {
 
