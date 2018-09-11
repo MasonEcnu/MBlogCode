@@ -25,9 +25,6 @@ fun runDemo(clzz: String) {
       "HungrySingleton" -> {
         Thread { HungrySingleton.getInstance() }.start()
       }
-      "SyncHungrySingleton" -> {
-        Thread { SyncHungrySingleton.getInstance() }.start()
-      }
       "DoubleCheckSingleton" -> {
         Thread { DoubleCheckSingleton.getInstance() }.start()
       }
