@@ -8,6 +8,10 @@ package com.mason.blog.singleton
  */
 class LazySingleton private constructor() {
 
+  init {
+    sum++
+  }
+
   companion object {
     private var instance: LazySingleton? = null
 
@@ -15,21 +19,9 @@ class LazySingleton private constructor() {
       // 多线程下，假如此时有多个线程都判断instance == null为true
       // 则都会进入到if代码块中，从而创建多个实例
       if (instance == null) {
-        sum++
         instance = LazySingleton()
       }
       return instance
     }
   }
-}
-
-fun main(args: Array<String>) {
-  val start = System.currentTimeMillis()
-  (1..MAX_THREAD_NUM).forEach {
-    Thread { LazySingleton.getInstance() }.start()
-  }
-  Thread.sleep(MAX_SLEEP_TIME)
-  val end = System.currentTimeMillis()
-  println(sum)
-  println("Cost: ${end - start - MAX_SLEEP_TIME}")
 }

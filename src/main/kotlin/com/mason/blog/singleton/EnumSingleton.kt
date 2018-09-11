@@ -1,15 +1,10 @@
 package com.mason.blog.singleton
 
-import org.junit.Test
-
 /**
  * Created by mwu on 2018/9/10
+ * 枚举类单例
+ * 目前最优雅，最简单，最安全的单例实现方式
  */
-class EnumSingleton {
-
-
-  @Test
-  fun test() {
-
-  }
+enum class EnumSingleton {
+  INSTANCE
 }
